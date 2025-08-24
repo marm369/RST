@@ -3,11 +3,11 @@ import { Header } from './components/layout/Header';
 import { CookieConsent } from './components/ui/CookieConsent';
 import { OrderNavigation } from './components/features/OrderNavigation';
 import { HeroSection } from './components/sections/HeroSection';
+import { AboutSection } from './components/sections/AboutSection';
 import { ConceptSection } from './components/sections/ConceptSection';
 import { ProductsSection } from './components/sections/ProductsSection';
 import { QualitySection } from './components/sections/QualitySection';
 import { RestaurantsSection } from './components/sections/RestaurantsSection';
-import { FranchiseSection } from './components/sections/FranchiseSection';
 import { Footer } from './components/layout/Footer';
 import { LocationModal } from './components/modals/LocationModal';
 import { StoryModal } from './components/modals/StoryModal';
@@ -30,11 +30,11 @@ function App() {
       <main className="box-border">
         <OrderNavigation />
         <HeroSection />
-        <ConceptSection />
+        <AboutSection />
+        <ConceptSection /> 
         <ProductsSection />
         <QualitySection />
         <RestaurantsSection />
-        <FranchiseSection />
       </main>
       
       <Footer />

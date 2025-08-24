@@ -12,9 +12,9 @@ export const productsData = [
       imageClass: 'absolute italic aspect-[auto_2000_/_2000] bg-no-repeat bg-cover box-border h-full max-w-full object-cover w-full left-0 top-0'
     },
     {
-      id: 'petitefaim&accompagnement',
-      title: 'Petite faim & accompagnement',
-      alt: 'Petite faim & accompagnement',
+      id: 'accompagnement',
+      title: 'Accompagnement',
+      alt: 'Accompagnement',
       image: frites,
       href: '/carte/',
       imageClass: 'absolute italic aspect-[auto_2000_/_2000] bg-no-repeat bg-cover box-border h-full max-w-full object-cover w-full left-0 top-0'
