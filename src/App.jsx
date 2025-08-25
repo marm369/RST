@@ -1,16 +1,14 @@
-import React from 'react';
-import { Header } from './components/layout/Header';
-import { CookieConsent } from './components/ui/CookieConsent';
-import { OrderNavigation } from './components/features/OrderNavigation';
-import { HeroSection } from './components/sections/HeroSection';
-import { AboutSection } from './components/sections/AboutSection';
-import { ConceptSection } from './components/sections/ConceptSection';
-import { ProductsSection } from './components/sections/ProductsSection';
-import { QualitySection } from './components/sections/QualitySection';
-import { RestaurantsSection } from './components/sections/RestaurantsSection';
-import { Footer } from './components/layout/Footer';
-import { LocationModal } from './components/modals/LocationModal';
-import { StoryModal } from './components/modals/StoryModal';
+import React from "react";
+import { Header } from "./components/layout/Header";
+import { CookieConsent } from "./components/ui/CookieConsent";
+import { OrderNavigation } from "./components/features/OrderNavigation";
+import { HeroSection } from "./components/sections/HeroSection";
+import { AboutSection } from "./components/sections/AboutSection";
+import { ConceptSection } from "./components/sections/ConceptSection";
+import { ProductsSection } from "./components/sections/ProductsSection";
+import { QualitySection } from "./components/sections/QualitySection";
+import { RestaurantsSection } from "./components/sections/RestaurantsSection";
+import { Footer } from "./components/layout/Footer";
 
 function App() {
   return (
@@ -20,38 +18,26 @@ function App() {
           <CookieConsent />
         </div>
       </div>
-      
+
       <div className="relative box-border">
         <div className="absolute box-border h-px top-0"></div>
       </div>
-      
+
       <Header />
-      
+
       <main className="box-border">
         <OrderNavigation />
         <HeroSection />
         <AboutSection />
-        <ConceptSection /> 
+        <ConceptSection />
         <ProductsSection />
         <QualitySection />
         <RestaurantsSection />
       </main>
-      
+
       <Footer />
-      
-      <LocationModal />
-      <StoryModal />
-      
-      <div className="box-border">
-        <iframe className="box-border hidden max-w-full border-zinc-100"></iframe>
-      </div>
-      
-      <div className="relative box-border">
-        <div className="absolute box-border h-px -top-px"></div>
-      </div>
     </div>
   );
 }
 
 export default App;
-
