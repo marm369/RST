@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Header } from "./components/layout/Header";
-import { CookieConsent } from "./components/ui/CookieConsent";
 import { OrderNavigation } from "./components/features/OrderNavigation";
 import { HeroSection } from "./components/sections/HeroSection";
 import { AboutSection } from "./components/sections/AboutSection";
@@ -12,6 +11,7 @@ import { RestaurantsSection } from "./components/sections/RestaurantsSection";
 import { Footer } from "./components/layout/Footer";
 import Menu from "./menu/Menu";
 import Carte from "./carte/Carte";
+import Contact from "./contact/Contact"
 
 function MainPage() {
   const aboutRef = useRef(null);
@@ -40,6 +40,7 @@ function MainPage() {
       <Header scrollToSection={scrollToSection} refs={{ aboutRef, conceptRef }} />
       
       <main>
+        <OrderNavigation/> 
         <HeroSection />
         <AboutSection ref={aboutRef} scrollToConcept={scrollToConcept}  />
         <ConceptSection ref={conceptRef} />
@@ -60,6 +61,7 @@ export default function App() {
         <Route path="/" element={<MainPage />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/carte" element={<Carte />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
   );
