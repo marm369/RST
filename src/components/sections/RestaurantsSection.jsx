@@ -1,6 +1,8 @@
 import React from 'react';
 import pizza from "../../assets/pizza_background.jpg"
 import spaghetti from "../../assets/spaghetti.jpg"
+import { Link } from "react-router-dom";
+
 export function RestaurantsSection() {
   return (
     <div className="relative bg-white box-border z-[2] px-5 md:px-[30px]">
@@ -17,9 +19,9 @@ export function RestaurantsSection() {
           </p>
           <div className="items-center box-border gap-x-6 flex flex-wrap justify-start break-words gap-y-6 mt-[25px] md:mt-[50px]">
             <div title="Les restaurants" className="box-border break-words">
-              <a title="Les restaurants" className="text-white text-base font-medium content-center items-center bg-emerald-900 box-border gap-x-0 inline-flex justify-center leading-4 min-h-[60px] min-w-[200px] outline-transpant outline break-words gap-y-0 text-center uppercase align-middle w-full border-emerald-900 px-[53px] py-5 rounded-[30px] border-2 border-solid font-forma_djr_display md:text-xl md:leading-5 md:min-h-[75px] md:w-auto md:py-[25.5px] md:rounded-[37.5px]">
+              <Link title="Les restaurants" to="/carte" className="text-white text-base font-medium content-center items-center bg-emerald-900 box-border gap-x-0 inline-flex justify-center leading-4 min-h-[60px] min-w-[200px] outline-transpant outline break-words gap-y-0 text-center uppercase align-middle w-full border-emerald-900 px-[53px] py-5 rounded-[30px] border-2 border-solid font-forma_djr_display md:text-xl md:leading-5 md:min-h-[75px] md:w-auto md:py-[25.5px] md:rounded-[37.5px]">
                 Notre Restaurant
-              </a>
+              </Link>
             </div>
           </div>
           <div className="relative box-border h-0 max-w-full break-words w-full"></div>

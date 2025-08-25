@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { productsData } from '../../data/productsData';
+import { Link } from "react-router-dom";
 
 export function ProductsSection() {
   const scrollContainerRef = useRef(null);
@@ -105,13 +106,13 @@ export function ProductsSection() {
       <div className="relative box-border z-[2] px-5 py-[30px] md:px-[30px] md:py-[75px]">
         <div className="items-center box-border gap-x-6 flex flex-wrap justify-center max-w-screen-md gap-y-6 mx-auto">
           <div title="Découvrir" className="box-border">
-            <a 
+            <Link
               title="Découvrir" 
-              href="https://www.pizzacosy.fr/carte/" 
+              to="/menu" 
               className="text-white text-base font-medium content-center items-center bg-emerald-900 box-border gap-x-0 inline-flex justify-center leading-4 min-h-[60px] min-w-[200px] gap-y-0 text-center uppercase align-middle w-full border-emerald-900 px-[53px] py-5 rounded-[30px] border-2 border-solid font-forma_djr_display md:text-xl md:leading-5 md:min-h-[75px] md:w-auto md:py-[25.5px] md:rounded-[37.5px] focus:outline-none"
             >
               Découvrir
-            </a>
+            </Link>
           </div>
         </div>
       </div>

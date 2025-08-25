@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, forwardRef } from "react";
 import palermoImg from "/src/assets/palermo-sicily.jpg";
 import { storyStepsData } from "../../data/storyStepsData";
-export function ConceptSection() {
+
+export const ConceptSection = forwardRef((props, ref) => {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <section className="relative min-h-screen overflow-hidden">
+    <section id="concept" ref={ref} className="relative min-h-screen overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
@@ -74,9 +75,7 @@ export function ConceptSection() {
             {/* Navigation */}
             <div className="flex justify-between items-center space-x-4 mt-6 z-10 relative">
               <button
-                onClick={() =>
-                  setActiveStep(Math.max(0, activeStep - 1))
-                }
+                onClick={() => setActiveStep(Math.max(0, activeStep - 1))}
                 disabled={activeStep === 0}
                 className={`flex items-center space-x-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                   activeStep === 0
@@ -109,10 +108,7 @@ export function ConceptSection() {
 
               <button
                 onClick={() =>
-                  setActiveStep(Math.min(
-                    storyStepsData.length - 1,
-                    activeStep + 1
-                  ))
+                  setActiveStep(Math.min(storyStepsData.length - 1, activeStep + 1))
                 }
                 disabled={activeStep === storyStepsData.length - 1}
                 className={`flex items-center space-x-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${
@@ -146,12 +142,9 @@ export function ConceptSection() {
               <div className="bg-white/90 backdrop-blur-md rounded-3xl p-8 shadow-2xl border border-white/30 max-w-md mx-auto">
                 <div className="text-center">
                   <div className="text-6xl mb-4">🏛️</div>
-                  <h4 className="text-2xl font-bold text-gray-900 mb-3">
-                    Palermo, Sicile
-                  </h4>
+                  <h4 className="text-2xl font-bold text-gray-900 mb-3">Palermo, Sicile</h4>
                   <p className="text-gray-700 leading-relaxed">
-                    Berceau de nos traditions culinaires, cette magnifique ville
-                    sicilienne inspire chaque plat que nous préparons avec amour.
+                    Berceau de nos traditions culinaires, cette magnifique ville sicilienne inspire chaque plat que nous préparons avec amour.
                   </p>
                   <div className="mt-6 flex justify-center space-x-2">
                     <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
@@ -169,4 +162,4 @@ export function ConceptSection() {
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/50 to-transparent pointer-events-none"></div>
     </section>
   );
-}
+});
