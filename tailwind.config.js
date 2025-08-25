@@ -58,7 +58,7 @@ module.exports = {
           ],
           "forma-djr-display": ["forma-djr-display"],
           "souvenir-std": ["souvenir-std"],
-          "pizza-cosy": ["pizza-cosy"]
+           souvenir: ['"Playfair Display"', 'serif'],
         },
         keyframes: {
           "accordion-down": {

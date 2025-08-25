@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 export function LocationModal() {
   const [isOpen, setIsOpen] = useState(false);
-  const [searchValue, setSearchValue] = useState('');
+  const [searchValue, setSearchValue] = useState("");
 
   // Supprimer le type TypeScript ici
   const handleSearchChange = (e) => {
@@ -19,11 +19,15 @@ export function LocationModal() {
                 type="button"
                 className="text-[15px] items-center bg-red-300 gap-x-0 block justify-center leading-[22.5px] outline-blue-500 outline gap-y-0 text-center align-middle w-4/5 mx-auto px-0 py-[9px] rounded-[23px]"
               >
-                <span className="box-border">Voir les Pizza Cosy près de vous </span>
+                <span className="box-border">
+                  Voir les Pizza Cosy près de vous{" "}
+                </span>
                 <i className="font-black box-border inline-block leading-[15px]"></i>
               </button>
               <div className="absolute bg-red-400 shadow-[rgba(0,0,0,0.5)_2px_2px_2px_0px] box-border hidden uppercase z-[140000] px-5 py-2.5 rounded-bl rounded-br rounded-tl rounded-tr left-2/4 top-20"></div>
-              <div className="text-[14.4px] box-border leading-[21.6px] text-center lowercase w-full my-1">ou</div>
+              <div className="text-[14.4px] box-border leading-[21.6px] text-center lowercase w-full my-1">
+                ou
+              </div>
               <div className="relative box-border">
                 <input
                   type="text"
@@ -48,7 +52,8 @@ export function LocationModal() {
               Demande d'Itinéraire
             </h3>
             <p className="text-lg font-medium box-border leading-[27px] mb-[9px] font-forma_djr_display">
-              Afin de vous proposer un itinéraire, nous avons besoin de votre adresse de départ :
+              Afin de vous proposer un itinéraire, nous avons besoin de votre
+              adresse de départ :
             </p>
             <input
               type="text"
@@ -58,7 +63,9 @@ export function LocationModal() {
               onChange={handleSearchChange}
             />
             <div className="text-red-700 box-border hidden">
-              Cette adresse n'est pas assez précise. Vous pouvez par exemple saisir le numéro de la rue, le nom de votre hotel ou de votre entreprise où vous souhaitez vous faire livrer.
+              Cette adresse n'est pas assez précise. Vous pouvez par exemple
+              saisir le numéro de la rue, le nom de votre hotel ou de votre
+              entreprise où vous souhaitez vous faire livrer.
             </div>
             <a
               href="#"
