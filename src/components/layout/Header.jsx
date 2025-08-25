@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { navigationData } from "../../data/navigationData";
-import whiteLogo from "../../assets/mamma_palermo_white.png";
-import greenLogo from "../../assets/mamma_palermo_green.png";
+import whiteLogo from "../../assets/logos/mamma_palermo_white.png";
+import greenLogo from "../../assets/logos/mamma_palermo_green.png";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
